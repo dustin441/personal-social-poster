@@ -7,7 +7,7 @@ export default function CheckoutPage() {
         <a href="/" className="text-sm font-bold text-brand-700">← Back to overview</a>
         <div className="mt-8 grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
           <section className="rounded-[2rem] border border-line bg-white p-7 shadow-soft">
-            <div className="rounded-full bg-brand-50 px-4 py-2 text-sm font-bold text-brand-700 inline-flex">
+            <div className="inline-flex rounded-full bg-brand-50 px-4 py-2 text-sm font-bold text-brand-700">
               Secure checkout
             </div>
             <h1 className="mt-5 text-4xl font-black tracking-[-0.04em]">
@@ -27,9 +27,20 @@ export default function CheckoutPage() {
                 <li>✓ Safety and troubleshooting docs</li>
               </ul>
             </div>
-            <p className="mt-5 text-sm leading-6 text-slate-500">
-              This is a DIY digital product. It requires a computer that can stay awake during posting windows.
-            </p>
+
+            <div className="mt-6 rounded-3xl border border-line bg-white p-5 text-sm leading-6 text-slate-700">
+              <p className="font-black text-ink">Before you buy, confirm this is a fit:</p>
+              <ul className="mt-3 list-disc space-y-2 pl-5">
+                <li>This is a DIY digital download, not done-for-you installation.</li>
+                <li>You need a compatible computer that can stay awake during posting windows.</li>
+                <li>You are responsible for logging into your own browser and complying with platform rules.</li>
+                <li>Browser automation can require updates if third-party platforms change their UI.</li>
+                <li>All sales are final once access to the download is granted.</li>
+              </ul>
+              <a href="/terms" target="_blank" className="mt-4 inline-flex font-black text-brand-700 underline">
+                Read full Terms and refund policy
+              </a>
+            </div>
           </section>
           <EmbeddedCheckoutBox />
         </div>
