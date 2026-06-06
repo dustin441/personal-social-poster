@@ -1,0 +1,13 @@
+node_modules
+.next
+.vercel
+.env
+.env*.local
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Do not commit the paid ZIP if this repository is public.
+private/*.zip
