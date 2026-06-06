@@ -9,10 +9,14 @@ export function middleware(request: NextRequest) {
     const url = request.nextUrl.clone();
     url.protocol = "https:";
     url.host = CANONICAL_HOST;
-    return NextResponse.redirect(url, 308);
+    const response = NextResponse.redirect(url, 308);
+    response.headers.set("Referrer-Policy", "no-referrer");
+    return response;
   }
 
-  return NextResponse.next();
+  const response = NextResponse.next();
+  response.headers.set("Referrer-Policy", "no-referrer");
+  return response;
 }
 
 export const config = {

@@ -18,6 +18,7 @@ export default async function SuccessPage({ searchParams }: { searchParams: Prom
   const session = await getSession(params.session_id);
   const isPaid = session?.payment_status === "paid";
   const downloadHref = params.session_id ? `/api/download?session_id=${encodeURIComponent(params.session_id)}` : "#";
+  const assistantHref = params.session_id ? `/assistant?session_id=${encodeURIComponent(params.session_id)}` : "#";
 
   return (
     <main className="min-h-screen bg-smoke px-6 py-12 text-ink">
@@ -33,12 +34,26 @@ export default async function SuccessPage({ searchParams }: { searchParams: Prom
             <p className="mt-5 text-lg leading-8 text-slate-600">
               Download the ZIP, unzip it, then give the unzipped profilepilot-kit folder to Hermes, OpenClaw, Claude Code, Codex, or your preferred coding agent. Do not paste the whole ZIP into chat; open the folder in the agent and paste the install prompt.
             </p>
-            <a
-              href={downloadHref}
-              className="mt-8 inline-flex rounded-full bg-ink px-7 py-4 text-base font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-brand-700"
-            >
-              Download the kit ZIP
-            </a>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href={downloadHref}
+                className="inline-flex rounded-full bg-ink px-7 py-4 text-base font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-brand-700"
+              >
+                Download the kit ZIP
+              </a>
+              <a
+                href={assistantHref}
+                className="inline-flex rounded-full border border-brand-100 bg-brand-50 px-7 py-4 text-base font-bold text-brand-700 transition hover:-translate-y-0.5 hover:bg-white"
+              >
+                Open Setup Assistant
+              </a>
+            </div>
+            <div className="mt-6 rounded-3xl border border-brand-100 bg-brand-50 p-6">
+              <h2 className="text-xl font-black">Need help while installing?</h2>
+              <p className="mt-3 leading-7 text-slate-700">
+                Your purchase includes access to the ProfilePilot Setup Assistant. Ask it how to configure n8n, where to paste a website URL for scraping, how to use Firecrawl or HTTP Request, how to connect the Sheet, and how to run dry tests before any real post.
+              </p>
+            </div>
             <div className="mt-8 rounded-3xl border border-line bg-smoke p-6">
               <h2 className="text-xl font-black">Start here after download</h2>
               <ol className="mt-4 list-decimal space-y-2 pl-5 text-slate-700">
@@ -57,7 +72,7 @@ export default async function SuccessPage({ searchParams }: { searchParams: Prom
                 <ul className="mt-4 space-y-2 text-sm leading-6 text-slate-700">
                   <li>✓ START-HERE, requirements, architecture, safety, support, and troubleshooting docs</li>
                   <li>✓ Google Sheet approval queue template and sample rows</li>
-                  <li>✓ n8n workflow folder for queue/draft automation</li>
+                  <li>✓ n8n workflow folder for queue/draft automation and website URL scraping guidance</li>
                   <li>✓ Local Playwright poster folder with scripts and environment template</li>
                   <li>✓ AI-agent install prompts for guided setup</li>
                   <li>✓ Testing and go-live checklists</li>

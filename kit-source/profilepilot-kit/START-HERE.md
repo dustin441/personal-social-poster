@@ -62,6 +62,7 @@ Open this folder in OpenClaw and paste the prompt from:
 1. Read `WHAT-YOU-NEED.md`
 2. Create your Google Sheet using `google-sheets/sheet-columns.md`
 3. Import/configure the n8n workflow in `n8n/workflow.json`
+   - If you want n8n to scrape a page/article/website URL and turn it into a draft post, read `SCRAPING-WEBSITE-URLS.md` before customizing the workflow.
 4. Configure the local poster in `local-poster/`
 5. Run the dry-run tests
 6. Publish one approved real test post
