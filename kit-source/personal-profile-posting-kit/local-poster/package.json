@@ -1,0 +1,14 @@
+{
+  "name": "personal-profile-local-poster",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test:config": "node scripts/test-config.mjs",
+    "dry-run": "node scripts/post-approved-content.mjs --dry-run"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "playwright": "^1.49.1"
+  }
+}

@@ -9,37 +9,20 @@ npm install
 npm run dev
 ```
 
-## Stripe setup options
+## Stripe setup
 
-The checkout button supports two launch paths.
-
-### Fastest: Stripe Payment Link
-
-Set this Vercel environment variable:
-
-```bash
-STRIPE_PAYMENT_LINK_URL=https://buy.stripe.com/...
-```
-
-The button will send buyers directly to that Payment Link.
-
-Important: configure the Payment Link's after-payment redirect URL in Stripe to:
-
-```text
-https://YOUR_DOMAIN/success?session_id={CHECKOUT_SESSION_ID}
-```
-
-### Better: Stripe Checkout API
+The checkout page uses Stripe Embedded Checkout so the buyer stays on the site instead of being sent to a generic Stripe-hosted page.
 
 Set these Vercel environment variables:
 
 ```bash
 STRIPE_SECRET_KEY=sk_live_...
 STRIPE_PRICE_ID=price_...
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_live_...
 NEXT_PUBLIC_SITE_URL=https://YOUR_DOMAIN
 ```
 
-The app will create a Stripe Checkout Session and redirect to `/success?session_id=...` after payment.
+The app creates an embedded Stripe Checkout Session at `/checkout` and returns the buyer to `/success?session_id=...` after payment.
 
 ## Digital product download
 
@@ -67,7 +50,7 @@ Alternative: add a ZIP at `private/personal-profile-posting-kit.zip`. Do not do 
 
 - [ ] Create Stripe product: Personal Profile Posting Automation Kit
 - [ ] Create one-time price, recommended beta price: $97
-- [ ] Add `STRIPE_SECRET_KEY` and `STRIPE_PRICE_ID` to Vercel, or add `STRIPE_PAYMENT_LINK_URL`
+- [ ] Add `STRIPE_SECRET_KEY`, `STRIPE_PRICE_ID`, and `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` to Vercel
 - [ ] Add `NEXT_PUBLIC_SITE_URL` to Vercel
 - [ ] Add `KIT_DOWNLOAD_URL` to Vercel
 - [ ] Deploy on Vercel

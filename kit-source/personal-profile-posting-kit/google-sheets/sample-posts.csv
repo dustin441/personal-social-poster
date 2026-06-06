@@ -1,0 +1,2 @@
+post_id,platform,post_text,first_comment,source_url,scheduled_for,status,local_status,posted_url,error_notes,last_attempted_at,created_at,posted_at
+test-001,linkedin,"Testing my personal posting workflow.",,,2026-01-01 09:00:00,approved,ready_to_post,,,,2026-01-01 08:00:00,
