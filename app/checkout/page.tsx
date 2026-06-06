@@ -16,6 +16,12 @@ export default function CheckoutPage() {
             <p className="mt-4 text-lg leading-8 text-slate-600">
               Download the docs, prompts, n8n workflow, Google Sheet template, and local browser posting setup files.
             </p>
+            <div className="mt-5 rounded-3xl border border-brand-100 bg-brand-50 p-5 text-sm leading-6 text-slate-700">
+              <p className="font-black text-ink">Immediately after payment:</p>
+              <p className="mt-2">
+                You will land on a ProfilePilotKit.com thank-you page with a gated ZIP download and step-by-step instructions for opening the kit in your AI coding agent.
+              </p>
+            </div>
             <div className="mt-7 rounded-3xl bg-smoke p-5">
               <div className="text-sm font-bold uppercase tracking-[0.18em] text-slate-500">Today</div>
               <div className="mt-2 text-5xl font-black tracking-[-0.06em]">$97</div>

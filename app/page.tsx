@@ -88,7 +88,7 @@ export default function Home() {
             <div className="absolute -right-10 -top-10 h-64 w-64 rounded-full bg-brand-100 blur-3xl" />
             <div className="relative rounded-[2rem] border border-line bg-white/88 p-5 shadow-soft backdrop-blur">
               <div className="mb-5 flex items-center gap-3 rounded-[1.5rem] border border-line bg-white p-4">
-                <img src="/profilepilot-logo.png" alt="ProfilePilot Kit logo" className="h-14 w-14 rounded-2xl object-cover" />
+                <img src="/profilepilot-mark.svg" alt="ProfilePilot Kit logo" className="h-14 w-14 rounded-2xl object-cover" />
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-600">ProfilePilot Kit</p>
                   <p className="mt-1 text-sm font-semibold text-slate-700">Download. Unzip. Let your AI agent install it.</p>

@@ -4,8 +4,17 @@ import Stripe from "stripe";
 function getSiteUrl() {
   const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
-  if (configuredUrl && !configuredUrl.includes("vercel.app") && !configuredUrl.includes("localhost")) {
-    return configuredUrl;
+  if (configuredUrl) {
+    try {
+      const url = new URL(configuredUrl);
+      const host = url.host.toLowerCase();
+
+      if (url.protocol === "https:" && !host.endsWith(".vercel.app") && !host.includes("localhost")) {
+        return url.origin;
+      }
+    } catch {
+      // Ignore malformed values and fall back below.
+    }
   }
 
   if (process.env.NODE_ENV === "development") {

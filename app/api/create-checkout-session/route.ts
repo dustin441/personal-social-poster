@@ -2,11 +2,26 @@ import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
 function getSiteUrl() {
-  return (
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    process.env.VERCEL_PROJECT_PRODUCTION_URL && `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` ||
-    "http://localhost:3000"
-  );
+  const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
+  if (configuredUrl) {
+    try {
+      const url = new URL(configuredUrl);
+      const host = url.host.toLowerCase();
+
+      if (url.protocol === "https:" && !host.endsWith(".vercel.app") && !host.includes("localhost")) {
+        return url.origin;
+      }
+    } catch {
+      // Ignore malformed values and fall back below.
+    }
+  }
+
+  if (process.env.NODE_ENV === "development") {
+    return configuredUrl || "http://localhost:3000";
+  }
+
+  return "https://www.profilepilotkit.com";
 }
 
 export async function POST() {
