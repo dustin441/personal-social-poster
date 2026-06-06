@@ -41,8 +41,8 @@ export default async function AssistantPage({ searchParams }: { searchParams: Pr
 
   const assistantHref = `/assistant?session_id=${encodeURIComponent(params.session_id)}`;
   const downloadHref = `/api/download?session_id=${encodeURIComponent(params.session_id)}`;
-  const n8nUrl = process.env.NEXT_PUBLIC_N8N_AFFILIATE_URL || "https://n8n.io/affiliates";
-  const firecrawlUrl = process.env.NEXT_PUBLIC_FIRECRAWL_AFFILIATE_URL || "https://www.firecrawl.dev/affiliates";
+  const n8nUrl = process.env.NEXT_PUBLIC_N8N_AFFILIATE_URL || "https://n8n.io";
+  const firecrawlUrl = process.env.NEXT_PUBLIC_FIRECRAWL_AFFILIATE_URL || "https://www.firecrawl.dev";
 
   return (
     <main className="min-h-screen bg-smoke px-6 py-12 text-ink">
@@ -96,10 +96,10 @@ export default async function AssistantPage({ searchParams }: { searchParams: Pr
               </p>
               <div className="mt-4 flex flex-col gap-2">
                 <a href={n8nUrl} target="_blank" rel="noreferrer" className="rounded-full border border-line px-4 py-2 text-center text-sm font-black hover:bg-smoke">
-                  n8n signup / affiliate link
+                  n8n account
                 </a>
                 <a href={firecrawlUrl} target="_blank" rel="noreferrer" className="rounded-full border border-line px-4 py-2 text-center text-sm font-black hover:bg-smoke">
-                  Firecrawl signup / affiliate link
+                  Firecrawl account
                 </a>
               </div>
             </div>
