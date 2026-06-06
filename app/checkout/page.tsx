@@ -11,7 +11,7 @@ export default function CheckoutPage() {
               Secure checkout
             </div>
             <h1 className="mt-5 text-4xl font-black tracking-[-0.04em]">
-              Personal Profile Posting Automation Kit
+              ProfilePilot Kit
             </h1>
             <p className="mt-4 text-lg leading-8 text-slate-600">
               Download the docs, prompts, n8n workflow, Google Sheet template, and local browser posting setup files.

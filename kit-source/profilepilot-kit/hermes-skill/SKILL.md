@@ -1,10 +1,10 @@
 ---
-name: personal-profile-posting-kit
-description: Install and troubleshoot the Personal Profile Posting Automation Kit.
+name: profilepilot-kit
+description: Install and troubleshoot the ProfilePilot Kit.
 version: 0.1.0
 ---
 
-# Personal Profile Posting Kit
+# ProfilePilot Kit
 
 Use this skill when helping a buyer install the kit.
 

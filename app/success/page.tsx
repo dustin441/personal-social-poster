@@ -42,12 +42,37 @@ export default async function SuccessPage({ searchParams }: { searchParams: Prom
             <div className="mt-8 rounded-3xl border border-line bg-smoke p-6">
               <h2 className="text-xl font-black">Start here after download</h2>
               <ol className="mt-4 list-decimal space-y-2 pl-5 text-slate-700">
-                <li>Unzip the folder.</li>
-                <li>Open the folder in your AI coding agent.</li>
-                <li>Paste prompts/hermes-install-prompt.md or prompts/openclaw-install-prompt.md.</li>
+                <li>Unzip the folder and open START-HERE.md first.</li>
+                <li>Open the unzipped folder in Hermes, OpenClaw, Claude Code, Codex, or your preferred coding agent.</li>
+                <li>Paste prompts/hermes-install-prompt.md, prompts/openclaw-install-prompt.md, or the closest prompt for your agent.</li>
+                <li>Follow the setup docs in order: requirements, Google Sheet, n8n, local poster, testing, then go-live.</li>
                 <li>Run dry tests before any real post.</li>
                 <li>Do not approve a real post until the testing checklist passes.</li>
               </ol>
+            </div>
+
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              <div className="rounded-3xl border border-line bg-white p-6">
+                <h2 className="text-xl font-black">What is inside the ZIP</h2>
+                <ul className="mt-4 space-y-2 text-sm leading-6 text-slate-700">
+                  <li>✓ START-HERE, requirements, architecture, safety, support, and troubleshooting docs</li>
+                  <li>✓ Google Sheet approval queue template and sample rows</li>
+                  <li>✓ n8n workflow folder for queue/draft automation</li>
+                  <li>✓ Local Playwright poster folder with scripts and environment template</li>
+                  <li>✓ AI-agent install prompts for guided setup</li>
+                  <li>✓ Testing and go-live checklists</li>
+                </ul>
+              </div>
+              <div className="rounded-3xl border border-line bg-white p-6">
+                <h2 className="text-xl font-black">Install framework</h2>
+                <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm leading-6 text-slate-700">
+                  <li>Create or copy the Google Sheet queue.</li>
+                  <li>Configure n8n or your content process to add draft rows.</li>
+                  <li>Connect the local poster to the Sheet and browser profile.</li>
+                  <li>Test config, browser login, dry-run posting, and status logging.</li>
+                  <li>Start with a small posting schedule and monitor the first runs.</li>
+                </ol>
+              </div>
             </div>
           </>
         ) : (

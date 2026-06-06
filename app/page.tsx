@@ -45,7 +45,7 @@ export default function Home() {
       <section className="gradient-grid overflow-hidden border-b border-line">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
           <a href="#top" className="text-sm font-bold tracking-tight">
-            Personal Profile Posting Kit
+            ProfilePilot Kit
           </a>
           <div className="hidden items-center gap-6 text-sm text-slate-600 sm:flex">
             <a href="#included" className="hover:text-ink">Included</a>
@@ -247,7 +247,7 @@ export default function Home() {
 
       <footer className="border-t border-line px-6 py-8 text-sm text-slate-500">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Personal Profile Posting Automation Kit</p>
+          <p>© {new Date().getFullYear()} ProfilePilot Kit</p>
           <div className="flex gap-5">
             <a href="/terms" className="hover:text-ink">Terms</a>
             <a href="/privacy" className="hover:text-ink">Privacy</a>

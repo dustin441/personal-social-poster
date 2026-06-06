@@ -3,14 +3,14 @@ export default function TermsPage() {
     <main className="min-h-screen bg-smoke px-6 py-12 text-ink">
       <article className="mx-auto max-w-4xl rounded-[2rem] border border-line bg-white p-8 shadow-soft md:p-12">
         <p className="text-sm font-bold uppercase tracking-[0.22em] text-brand-700">Terms and Conditions</p>
-        <h1 className="mt-3 text-4xl font-black tracking-[-0.04em]">Personal Profile Posting Automation Kit Terms</h1>
+        <h1 className="mt-3 text-4xl font-black tracking-[-0.04em]">ProfilePilot Kit Terms</h1>
         <p className="mt-3 text-sm text-slate-500">Effective date: June 6, 2026 • Version 1.0</p>
 
         <div className="mt-8 space-y-7 text-sm leading-7 text-slate-700">
           <section>
             <h2 className="text-xl font-black text-ink">1. Product being purchased</h2>
             <p className="mt-2">
-              The Personal Profile Posting Automation Kit is a downloadable digital product. It includes documentation,
+              The ProfilePilot Kit is a downloadable digital product. It includes documentation,
               prompts, templates, starter workflow files, and starter local automation files intended to help a buyer set up
               a human-approved personal-profile posting workflow. It is not a managed service, custom implementation,
               guaranteed software-as-a-service subscription, or promise of future compatibility with any third-party platform.

@@ -1,6 +1,6 @@
-# Personal Social Poster Landing Page
+# ProfilePilot Kit Landing Page
 
-Next.js/Vercel sales page for the Personal Profile Posting Automation Kit.
+Next.js/Vercel sales page for the ProfilePilot Kit.
 
 ## Local development
 
@@ -37,7 +37,7 @@ KIT_DOWNLOAD_URL=https://your-download-link
 
 The `/api/download` route verifies Stripe payment first, then redirects paid buyers to `KIT_DOWNLOAD_URL`.
 
-Alternative: add a ZIP at `private/personal-profile-posting-kit.zip`. Do not do this if the GitHub repo is public, because the ZIP would be visible in the repository.
+Alternative: add a ZIP at `private/profilepilot-kit.zip`. Do not do this if the GitHub repo is public, because the ZIP would be visible in the repository.
 
 ## Required Vercel settings
 
@@ -48,7 +48,7 @@ Alternative: add a ZIP at `private/personal-profile-posting-kit.zip`. Do not do 
 
 ## Launch checklist
 
-- [ ] Create Stripe product: Personal Profile Posting Automation Kit
+- [ ] Create Stripe product: ProfilePilot Kit
 - [ ] Create one-time price, recommended beta price: $97
 - [ ] Add `STRIPE_SECRET_KEY`, `STRIPE_PRICE_ID`, and `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` to Vercel
 - [ ] Add `NEXT_PUBLIC_SITE_URL` to Vercel

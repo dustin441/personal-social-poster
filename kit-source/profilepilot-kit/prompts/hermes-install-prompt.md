@@ -1,4 +1,4 @@
-You are helping me install the Personal Profile Posting Automation Kit.
+You are helping me install the ProfilePilot Kit.
 
 Rules:
 

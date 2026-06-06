@@ -27,17 +27,17 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const file = await readFile(join(process.cwd(), "private", "personal-profile-posting-kit.zip"));
+    const file = await readFile(join(process.cwd(), "private", "profilepilot-kit.zip"));
     return new NextResponse(file, {
       headers: {
         "Content-Type": "application/zip",
-        "Content-Disposition": 'attachment; filename="personal-profile-posting-kit.zip"',
+        "Content-Disposition": 'attachment; filename="profilepilot-kit.zip"',
         "Cache-Control": "no-store",
       },
     });
   } catch {
     return NextResponse.json(
-      { error: "The kit ZIP has not been connected yet. Set KIT_DOWNLOAD_URL in Vercel, or add private/personal-profile-posting-kit.zip before launch." },
+      { error: "The kit ZIP has not been connected yet. Set KIT_DOWNLOAD_URL in Vercel, or add private/profilepilot-kit.zip before launch." },
       { status: 404 }
     );
   }

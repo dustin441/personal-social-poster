@@ -1,4 +1,4 @@
-You are debugging my Personal Profile Posting Automation Kit.
+You are debugging my ProfilePilot Kit.
 
 Rules:
 

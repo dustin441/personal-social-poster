@@ -7,7 +7,7 @@ const nextConfig = {
   reactStrictMode: true,
   outputFileTracingRoot: __dirname,
   outputFileTracingIncludes: {
-    "/api/download": ["./private/personal-profile-posting-kit.zip"],
+    "/api/download": ["./private/profilepilot-kit.zip"],
   },
 };
 
