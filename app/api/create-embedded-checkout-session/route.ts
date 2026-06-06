@@ -2,11 +2,17 @@ import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
 function getSiteUrl() {
-  return (
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    (process.env.VERCEL_PROJECT_PRODUCTION_URL && `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`) ||
-    "http://localhost:3000"
-  );
+  const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
+  if (configuredUrl && !configuredUrl.includes("vercel.app") && !configuredUrl.includes("localhost")) {
+    return configuredUrl;
+  }
+
+  if (process.env.NODE_ENV === "development") {
+    return configuredUrl || "http://localhost:3000";
+  }
+
+  return "https://www.profilepilotkit.com";
 }
 
 export async function POST() {
@@ -39,7 +45,7 @@ export async function POST() {
           "By paying, you confirm this is a DIY digital download with final-sale terms after access is granted. Setup help, custom implementation, and future platform fixes are not included unless purchased separately.",
       },
       terms_of_service_acceptance: {
-        message: `I agree to the Terms and refund policy at ${siteUrl}/terms. Terms version: ${termsVersion}.`,
+        message: `I agree to the ProfilePilot Kit Terms and refund policy at ${siteUrl}/terms. Terms version: ${termsVersion}.`,
       },
     },
     return_url: `${siteUrl}/success?session_id={CHECKOUT_SESSION_ID}`,

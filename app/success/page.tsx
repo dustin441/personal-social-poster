@@ -31,7 +31,7 @@ export default async function SuccessPage({ searchParams }: { searchParams: Prom
         {isPaid ? (
           <>
             <p className="mt-5 text-lg leading-8 text-slate-600">
-              Download the ZIP, unzip it, open the folder in Hermes, OpenClaw, Claude Code, or your coding agent, then paste the setup prompt from the prompts folder.
+              Download the ZIP, unzip it, then give the unzipped profilepilot-kit folder to Hermes, OpenClaw, Claude Code, Codex, or your preferred coding agent. Do not paste the whole ZIP into chat; open the folder in the agent and paste the install prompt.
             </p>
             <a
               href={downloadHref}
@@ -42,11 +42,11 @@ export default async function SuccessPage({ searchParams }: { searchParams: Prom
             <div className="mt-8 rounded-3xl border border-line bg-smoke p-6">
               <h2 className="text-xl font-black">Start here after download</h2>
               <ol className="mt-4 list-decimal space-y-2 pl-5 text-slate-700">
-                <li>Unzip the folder and open START-HERE.md first.</li>
-                <li>Open the unzipped folder in Hermes, OpenClaw, Claude Code, Codex, or your preferred coding agent.</li>
-                <li>Paste prompts/hermes-install-prompt.md, prompts/openclaw-install-prompt.md, or the closest prompt for your agent.</li>
-                <li>Follow the setup docs in order: requirements, Google Sheet, n8n, local poster, testing, then go-live.</li>
-                <li>Run dry tests before any real post.</li>
+                <li>Download profilepilot-kit.zip and unzip it.</li>
+                <li>Open the unzipped profilepilot-kit folder in your AI coding agent or terminal.</li>
+                <li>Tell the agent: “Read START-HERE.md first. Walk me through this setup one step at a time. Verify each step before continuing.”</li>
+                <li>Paste the matching prompt from prompts/hermes-install-prompt.md, prompts/openclaw-install-prompt.md, or the closest prompt for your agent.</li>
+                <li>Let the agent inspect the docs and files, then help you create the Sheet, configure n8n, configure the local poster, and run dry tests.</li>
                 <li>Do not approve a real post until the testing checklist passes.</li>
               </ol>
             </div>

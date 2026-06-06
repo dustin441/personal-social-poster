@@ -35,6 +35,10 @@ const faqs = [
     "Can browser automation break?",
     "Yes. Social platforms change their interfaces. The kit includes troubleshooting and selector-debugging guidance, but it is a DIY product, not a fully managed service.",
   ],
+  [
+    "Can I just give the ZIP to my AI agent?",
+    "Yes. Download and unzip the kit, open the unzipped profilepilot-kit folder in your coding agent, then paste the matching install prompt from the prompts folder. The agent should read START-HERE.md first and walk one step at a time.",
+  ],
 ];
 
 import { CheckoutButton } from "@/components/CheckoutButton";
@@ -49,6 +53,7 @@ export default function Home() {
           </a>
           <div className="hidden items-center gap-6 text-sm text-slate-600 sm:flex">
             <a href="#included" className="hover:text-ink">Included</a>
+            <a href="#demo" className="hover:text-ink">Demo</a>
             <a href="#faq" className="hover:text-ink">FAQ</a>
             <a href="#pricing" className="hover:text-ink">Pricing</a>
           </div>
@@ -129,6 +134,30 @@ export default function Home() {
                 <span className="text-lg font-bold">{item}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+
+      <section className="mx-auto max-w-6xl px-6 py-20" id="demo">
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-brand-600">See it in action</p>
+            <h2 className="mt-4 text-4xl font-black tracking-[-0.04em] sm:text-5xl">
+              Watch the approved-post workflow run from queue to browser.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600">
+              This demo shows the practical flow buyers are setting up: approved content in a queue, a local computer using a trusted browser session, and status logging after the run.
+            </p>
+          </div>
+          <div className="overflow-hidden rounded-[2rem] border border-line bg-ink p-2 shadow-soft">
+            <iframe
+              src="https://drive.google.com/file/d/1FUtI33jU9u_Xl9F9mXnPduXgtfjtmDS6/preview"
+              className="aspect-video w-full rounded-[1.5rem] bg-black"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              allowFullScreen
+              title="ProfilePilot Kit workflow demo"
+            />
           </div>
         </div>
       </section>

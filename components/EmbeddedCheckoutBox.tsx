@@ -48,9 +48,9 @@ export function EmbeddedCheckoutBox() {
             className="mt-1 h-5 w-5 shrink-0 rounded border-amber-400 accent-brand-600"
           />
           <span>
-            I understand this is an immediately delivered DIY digital product. I understand all sales are final once access is
+            I understand ProfilePilot Kit is an immediately delivered DIY digital product. I understand all sales are final once access is
             granted, this is not a done-for-you setup service, I need a compatible always-on computer/browser session, and I agree
-            to the <a href="/terms" target="_blank" className="font-black underline">Terms and refund policy</a>.
+            to the <a href="https://www.profilepilotkit.com/terms" target="_blank" className="font-black underline">ProfilePilot Kit Terms and refund policy</a>.
           </span>
         </label>
       </div>
