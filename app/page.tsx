@@ -48,8 +48,9 @@ export default function Home() {
     <main className="min-h-screen bg-white text-ink">
       <section className="gradient-grid overflow-hidden border-b border-line">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-          <a href="#top" className="text-sm font-bold tracking-tight">
-            ProfilePilot Kit
+          <a href="#top" className="flex items-center gap-2 text-sm font-bold tracking-tight">
+            <img src="/profilepilot-mark.svg" alt="" className="h-9 w-9 rounded-xl shadow-sm" />
+            <span>ProfilePilot Kit</span>
           </a>
           <div className="hidden items-center gap-6 text-sm text-slate-600 sm:flex">
             <a href="#included" className="hover:text-ink">Included</a>
@@ -86,6 +87,13 @@ export default function Home() {
           <div className="relative">
             <div className="absolute -right-10 -top-10 h-64 w-64 rounded-full bg-brand-100 blur-3xl" />
             <div className="relative rounded-[2rem] border border-line bg-white/88 p-5 shadow-soft backdrop-blur">
+              <div className="mb-5 flex items-center gap-3 rounded-[1.5rem] border border-line bg-white p-4">
+                <img src="/profilepilot-logo.png" alt="ProfilePilot Kit logo" className="h-14 w-14 rounded-2xl object-cover" />
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-600">ProfilePilot Kit</p>
+                  <p className="mt-1 text-sm font-semibold text-slate-700">Download. Unzip. Let your AI agent install it.</p>
+                </div>
+              </div>
               <div className="rounded-[1.5rem] bg-ink p-5 text-white">
                 <div className="flex items-center gap-2 border-b border-white/10 pb-4">
                   <span className="h-3 w-3 rounded-full bg-red-400" />
@@ -177,6 +185,29 @@ export default function Home() {
                 <h3 className="text-lg font-bold">{feature}</h3>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <div className="grid gap-10 rounded-[2rem] border border-line bg-white p-6 shadow-soft md:p-10 lg:grid-cols-[0.85fr_1.15fr]">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-brand-600">After purchase</p>
+            <h2 className="mt-4 text-4xl font-black tracking-[-0.04em] sm:text-5xl">
+              The download is packaged so your AI agent can take it from there.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600">
+              Buyers get one ZIP containing the docs, prompts, templates, n8n workflow files, local poster starter files, safety guidance, and testing checklists.
+            </p>
+          </div>
+          <div className="rounded-[1.5rem] bg-smoke p-6">
+            <ol className="list-decimal space-y-3 pl-5 text-slate-700">
+              <li>Download <span className="font-bold text-ink">profilepilot-kit.zip</span> from the thank-you page.</li>
+              <li>Unzip it so you have a normal <span className="font-bold text-ink">profilepilot-kit/</span> folder.</li>
+              <li>Open that folder in Hermes, OpenClaw, Claude Code, Codex, or another AI coding agent.</li>
+              <li>Tell the agent: “Read START-HERE.md first. Walk me through this setup one step at a time. Verify each step before continuing.”</li>
+              <li>Paste the matching prompt from the <span className="font-bold text-ink">prompts/</span> folder and run dry tests before approving any real post.</li>
+            </ol>
           </div>
         </div>
       </section>
