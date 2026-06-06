@@ -10,9 +10,13 @@ async function isPaidSession(sessionId: string) {
     return false;
   }
 
-  const stripe = new Stripe(secretKey, { apiVersion: "2025-02-24.acacia" });
-  const session = await stripe.checkout.sessions.retrieve(sessionId);
-  return session.payment_status === "paid";
+  try {
+    const stripe = new Stripe(secretKey, { apiVersion: "2025-02-24.acacia" });
+    const session = await stripe.checkout.sessions.retrieve(sessionId);
+    return session.payment_status === "paid";
+  } catch {
+    return false;
+  }
 }
 
 export async function GET(request: NextRequest) {

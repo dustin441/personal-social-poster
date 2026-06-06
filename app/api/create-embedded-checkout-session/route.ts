@@ -44,7 +44,7 @@ export async function POST() {
     },
     return_url: `${siteUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
     metadata: {
-      product: "personal-profile-posting-automation-kit",
+      product: "profilepilot-kit",
       product_type: "digital_download",
       terms_version: termsVersion,
       refund_policy: "final_sale_after_access_granted",
@@ -52,7 +52,7 @@ export async function POST() {
     },
     payment_intent_data: {
       metadata: {
-        product: "personal-profile-posting-automation-kit",
+        product: "profilepilot-kit",
         product_type: "digital_download",
         terms_version: termsVersion,
         refund_policy: "final_sale_after_access_granted",

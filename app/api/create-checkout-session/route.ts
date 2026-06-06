@@ -36,7 +36,7 @@ export async function POST() {
     success_url: `${siteUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${siteUrl}/?checkout=cancelled`,
     metadata: {
-      product: "personal-profile-posting-automation-kit",
+      product: "profilepilot-kit",
     },
   });
 
